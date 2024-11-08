@@ -60,3 +60,9 @@ input.ng-invalid.ng-touched {
 input.ng-valid.ng-touched {
   border-color: green;
 }
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+}

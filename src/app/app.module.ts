@@ -8,6 +8,10 @@ import { LibreriaComponent } from './components/libreria/libreria.component';
 import { ComicComponent } from './components/comic/comic.component';
 import { NewComicComponent } from './components/new-comic/new-comic.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ServiceComics } from './services/service.comics';
+import { ServicePersona } from './services/service.persona';
+import { PersonasapiComponent } from './components/personasapi/personasapi.component';
 
 @NgModule({
   declarations: [
@@ -15,14 +19,16 @@ import { FormsModule } from '@angular/forms';
     MenuComponent,
     LibreriaComponent,
     ComicComponent,
-    NewComicComponent
+    NewComicComponent,
+    PersonasapiComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ServiceComics, ServicePersona],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
