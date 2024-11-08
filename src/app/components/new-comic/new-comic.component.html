@@ -1,0 +1,41 @@
+<h1>Nuevo Comic</h1>
+
+<form #comicForm="ngForm" (ngSubmit)="submitForm(comicForm)">
+  <input
+    type="text"
+    name="nombre"
+    [(ngModel)]="comic.nombre"
+    #nombre="ngModel"
+    placeholder="Introduce el nombre"
+    required
+  />
+  <div *ngIf="nombre.invalid && nombre.touched" class="error-message">
+    El nombre es requerido.
+  </div>
+
+  <input
+    type="text"
+    name="imagen"
+    [(ngModel)]="comic.imagen"
+    #imagen="ngModel"
+    placeholder="Introduce la imagen (URL)"
+    required
+  />
+  <div *ngIf="imagen.invalid && imagen.touched" class="error-message">
+    La URL de la imagen es requerida.
+  </div>
+
+  <input
+    type="text"
+    name="descripcion"
+    [(ngModel)]="comic.descripcion"
+    #descripcion="ngModel"
+    placeholder="Introduce la descripción"
+    required
+  />
+  <div *ngIf="descripcion.invalid && descripcion.touched" class="error-message">
+    La descripción es requerida.
+  </div>
+
+  <button type="submit" [disabled]="!comicForm.valid">AÑADIR</button>
+</form>

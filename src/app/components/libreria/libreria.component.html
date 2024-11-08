@@ -1,0 +1,15 @@
+<h1>LIBRERIA</h1>
+
+<div *ngIf="favorito" style="background-color: rgba(218, 165, 32, 0.541);">
+  <img [src]="favorito.imagen" style="width: 300px;">
+  <h2>{{ favorito.nombre }}</h2>
+  <h3>{{ favorito.descripcion }}</h3>
+</div>
+
+<app-new-comic (newComic)="newComic($event)"></app-new-comic>
+
+<app-comic
+  *ngFor="let comic of comics"
+  [comic]="comic"
+  (setFavorito)="setFavorito($event)">
+</app-comic>

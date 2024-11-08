@@ -1,0 +1,56 @@
+/* Estilo para el título principal */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Estilo para el div del favorito */
+div {
+  margin: auto;
+  background-color: rgba(218, 165, 32, 0.541);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 30px; /* Separación entre el favorito y el resto */
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para la imagen del favorito */
+div img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Estilo para el título y descripción del favorito */
+div h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+div h3 {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Estilo para el contenedor de cómics */
+div.comic-list {
+  display: flex;
+  flex-wrap: wrap;  /* Permite que los cómics se acomoden en múltiples filas si es necesario */
+  justify-content: space-evenly;  /* Espacia los cómics de forma uniforme */
+  gap: 20px; /* Espacio entre los cómics */
+  margin-top: 30px; /* Espacio superior entre el bloque de favorito y la lista */
+}
